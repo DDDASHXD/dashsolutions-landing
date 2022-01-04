@@ -33,12 +33,12 @@ $globalWidth: 60rem;
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 body {
     background: $mainbg;
-    height: 100vh;
-    overflow-x: hidden;
+    height: 100%;
 }
 
 a {
@@ -189,7 +189,7 @@ a {
 }
 
 .hero {
-    height: 100%;
+    height: 100vh;
     position: relative;
     z-index: 1;
     display: grid;
@@ -393,10 +393,11 @@ footer {
 @media only screen and (max-width: 955px) {
     .nav {
         width: 100%;
-        padding: 20px $globalPadding;
+        padding: 20px 20px;
 
         nav {
             opacity: 0;
+            display: none;
         }
     }
    
@@ -405,7 +406,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 200px $globalPadding;
+        padding: 50px $globalPadding;
 
         .wrapper {
             width: 100%;
