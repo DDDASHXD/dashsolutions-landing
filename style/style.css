@@ -25,6 +25,7 @@ html {
 body {
   background: #161618;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -33,7 +34,7 @@ a {
 
 #backToTop {
   position: fixed;
-  right: 25rem;
+  right: 235px;
   bottom: 40px;
   width: 60px;
   height: 60px;
@@ -100,11 +101,13 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 25rem;
+  padding: 20px 0;
   position: absolute;
-  width: 100%;
+  width: 60rem;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 1000;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -252,7 +255,14 @@ a {
 
 .services {
   width: 100%;
-  padding: 200px 25rem;
+  padding: 200px 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.services .wrapper {
+  width: 60rem;
 }
 
 .services h1 {
@@ -332,11 +342,13 @@ a {
 }
 
 .contact {
-  padding: 0 25rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .contact .wrapper {
-  width: 100%;
+  width: 60rem;
   background: #e74a4a;
   background: linear-gradient(144deg, #e74a4a 43%, #e7794a 100%);
   padding: 25px;
@@ -389,7 +401,14 @@ a {
 }
 
 footer {
-  padding: 50px 25rem;
+  padding: 50px 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+footer .wrapper {
+  width: 60rem;
 }
 
 footer h1 {
@@ -401,98 +420,12 @@ footer h1 span {
   background: #4A4A4A;
 }
 
-@media only screen and (max-width: 1745px) {
+@media only screen and (max-width: 955px) {
   .nav {
-    padding: 20px 20rem;
-  }
-  .services {
-    padding: 200px 20rem;
-  }
-  .contact {
-    padding: 0 20rem;
-  }
-  footer {
-    padding: 50px 20rem;
-  }
-  #backToTop {
-    right: 20rem;
-  }
-}
-
-@media only screen and (max-width: 1590px) {
-  .nav {
-    padding: 20px 15rem;
-  }
-  .services {
-    padding: 200px 15rem;
-  }
-  .contact {
-    padding: 0 15rem;
-  }
-  footer {
-    padding: 50px 15rem;
-  }
-  #backToTop {
-    right: 15rem;
-  }
-}
-
-@media only screen and (max-width: 1415px) {
-  .nav {
-    padding: 20px 10rem;
-  }
-  .services {
-    padding: 200px 10rem;
-  }
-  .contact {
-    padding: 0 10rem;
-  }
-  footer {
-    padding: 50px 10rem;
-  }
-  #backToTop {
-    right: 10rem;
-  }
-}
-
-@media only screen and (max-width: 1255px) {
-  .nav {
-    padding: 20px 5rem;
-  }
-  .services {
-    padding: 200px 5rem;
-  }
-  .contact {
-    padding: 0 5rem;
-  }
-  footer {
-    padding: 50px 5rem;
-  }
-  #backToTop {
-    right: 5rem;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  .nav {
+    width: 100%;
     padding: 20px 1rem;
   }
-  .services {
-    padding: 200px 1rem;
-  }
-  .contact {
-    padding: 0 1rem;
-  }
-  footer {
-    padding: 50px 1rem;
-  }
-  #backToTop {
-    right: 1rem;
-  }
-}
-
-@media only screen and (max-width: 955px) {
-  nav {
+  .nav nav {
     opacity: 0;
   }
   .services {
@@ -506,6 +439,10 @@ footer h1 span {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 200px 1rem;
+  }
+  .services .wrapper {
+    width: 100%;
   }
   .services .cards {
     -webkit-box-orient: vertical;
@@ -534,6 +471,21 @@ footer h1 span {
     width: 50ch;
     text-align: center;
   }
+  .contact {
+    padding: 0 1rem;
+  }
+  .contact .wrapper {
+    width: 100%;
+  }
+  footer {
+    padding: 50px 1rem;
+  }
+  footer .wrapper {
+    width: 100%;
+  }
+  #backToTop {
+    right: 40px;
+  }
 }
 
 @media only screen and (max-width: 805px) {
@@ -548,7 +500,10 @@ footer h1 span {
   }
 }
 
-@media only screen and (max-width: 515px) {
+@media only screen and (max-width: 600px) {
+  .services h1, .services h2 {
+    text-align: center;
+  }
   .services .cards .card {
     padding-left: 10px;
     padding-right: 10px;

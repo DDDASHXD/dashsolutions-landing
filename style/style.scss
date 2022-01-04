@@ -15,7 +15,8 @@ $svgWhite: invert(92%) sepia(0%) saturate(4760%) hue-rotate(135deg) brightness(1
 $fontRoboto: 'Roboto', sans-serif;
 $fontMontserrat: 'Montserrat', sans-serif;
 
-$globalPadding: 25rem;
+$globalPadding: 1rem;
+$globalWidth: 60rem;
 
 * {
     margin: 0;
@@ -37,6 +38,7 @@ html {
 body {
     background: $mainbg;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 a {
@@ -45,7 +47,7 @@ a {
 
 #backToTop {
     position: fixed;
-    right: $globalPadding;
+    right: 235px;
     bottom: 40px;
     width: 60px;
     height: 60px;
@@ -99,11 +101,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px $globalPadding;
+    padding: 20px 0;
     position: absolute;
-    width: 100%;
+    width: $globalWidth;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     transition: all 0.25s ease;
 
@@ -241,7 +244,13 @@ a {
 
 .services {
     width: 100%;
-    padding: 200px $globalPadding;
+    padding: 200px 0;
+    display: grid;
+    place-items: center;
+
+    .wrapper {
+        width: $globalWidth;
+    }
 
     h1 {
         font-family: $fontMontserrat;
@@ -267,6 +276,7 @@ a {
             padding-top: 75px;
             padding-bottom: 70px;
             position: relative;
+            
 
             .icon {
                 position: absolute;
@@ -312,10 +322,12 @@ a {
 }
 
 .contact {
-    padding: 0 $globalPadding;
+    //padding: 0 $globalPadding;
+    display: grid;
+    place-items: center;
 
     .wrapper {
-        width: 100%;
+        width: $globalWidth;
         background: rgb(231,74,74);
         background: linear-gradient(144deg, rgba(231,74,74,1) 43%, rgba(231,121,74,1) 100%); 
         padding: 25px;
@@ -360,7 +372,13 @@ a {
 }
 
 footer {
-    padding: 50px $globalPadding;
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+
+    .wrapper {
+        width: $globalWidth;
+    }
 
     h1 {
         font-size: 1.5rem;
@@ -372,135 +390,26 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1745px) {
-    $globalPadding: 20rem;
-    
-    .nav {
-        padding: 20px $globalPadding;
-    }
-
-    .services {
-        padding: 200px $globalPadding;
-    }
-
-    .contact {
-        padding: 0 $globalPadding;
-    }
-
-    footer {
-        padding: 50px $globalPadding;
-    }
-
-    #backToTop {
-        right: $globalPadding;
-    }
-}
-
-@media only screen and (max-width: 1590px) {
-    $globalPadding: 15rem;
-    
-    .nav {
-        padding: 20px $globalPadding;
-    }
-
-    .services {
-        padding: 200px $globalPadding;
-    }
-
-    .contact {
-        padding: 0 $globalPadding;
-    }
-
-    footer {
-        padding: 50px $globalPadding;
-    }
-
-    #backToTop {
-        right: $globalPadding;
-    }
-}
-
-@media only screen and (max-width: 1415px) {
-    $globalPadding: 10rem;
-    
-    .nav {
-        padding: 20px $globalPadding;
-    }
-
-    .services {
-        padding: 200px $globalPadding;
-    }
-
-    .contact {
-        padding: 0 $globalPadding;
-    }
-
-    footer {
-        padding: 50px $globalPadding;
-    }
-
-    #backToTop {
-        right: $globalPadding;
-    }
-}
-
-@media only screen and (max-width: 1255px) {
-    $globalPadding: 5rem;
-    
-    .nav {
-        padding: 20px $globalPadding;
-    }
-
-    .services {
-        padding: 200px $globalPadding;
-    }
-
-    .contact {
-        padding: 0 $globalPadding;
-    }
-
-    footer {
-        padding: 50px $globalPadding;
-    }
-
-    #backToTop {
-        right: $globalPadding;
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    $globalPadding: 1rem;
-    
-    .nav {
-        padding: 20px $globalPadding;
-    }
-
-    .services {
-        padding: 200px $globalPadding;
-    }
-
-    .contact {
-        padding: 0 $globalPadding;
-    }
-
-    footer {
-        padding: 50px $globalPadding;
-    }
-
-    #backToTop {
-        right: $globalPadding;
-    }
-}
-
 @media only screen and (max-width: 955px) {
-    nav {
-        opacity: 0;
+    .nav {
+        width: 100%;
+        padding: 20px $globalPadding;
+
+        nav {
+            opacity: 0;
+        }
     }
+   
 
     .services {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 200px $globalPadding;
+
+        .wrapper {
+            width: 100%;
+        }
 
         .cards {
             flex-direction: column;
@@ -519,6 +428,25 @@ footer {
                 }
             }
         }
+    }
+
+    .contact {
+        padding: 0 $globalPadding;
+        .wrapper {
+            width: 100%;
+        }
+    }
+
+    footer {
+        padding: 50px $globalPadding;
+
+        .wrapper {
+            width: 100%;
+        }
+    }
+
+    #backToTop {
+        right: 40px;
     }
 }
 
@@ -542,8 +470,12 @@ footer {
     }
 }
 
-@media only screen and (max-width: 515px) {
+@media only screen and (max-width: 600px) {
     .services {
+        h1,h2 {
+            text-align: center;
+        }
+
         .cards {
             .card {
                 padding-left: 10px;
