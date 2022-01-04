@@ -32,6 +32,16 @@ a {
   text-decoration: none;
 }
 
+a.link {
+  color: #E74A4A;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+}
+
+a.link:hover {
+  color: #e76a6a;
+}
+
 #backToTop {
   position: fixed;
   right: 235px;

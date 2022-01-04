@@ -43,6 +43,15 @@ body {
 
 a {
     text-decoration: none;
+
+    &.link {
+        color: $accent;
+        transition: color 0.25s ease;
+
+        &:hover {
+            color: $accentHover;
+        }
+    }
 }
 
 #backToTop {
