@@ -66,6 +66,17 @@ a {
     place-items: center;
 }
 
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 200vh;
+    pointer-events: none;
+    background-color: $accent;
+    z-index: 10000;
+    visibility: hidden;
+    opacity: 0;
+}
+
 #backToTop {
     position: fixed;
     right: 235px;
@@ -222,10 +233,26 @@ a {
                             content: 'Contact';
                         }
                     }
+
+                    &#portfoliolink {
+                        &::after {
+                            content: 'Portfolio';
+                        }
+                    }
                 }
             }
         }
     }
+}
+
+.test {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $mainbg;
+    z-index: 999;
 }
 
 .hero {
@@ -284,6 +311,14 @@ a {
             gap: 10px;
         }
     }
+
+    &.portfolio {
+        height: 70vh;
+        .wrapper {
+            margin-bottom: -70px;
+        }
+        margin-bottom: 50px;
+    }
 }
 
 .services {
@@ -320,7 +355,7 @@ a {
             padding-top: 75px;
             padding-bottom: 70px;
             position: relative;
-            
+            transition: all 0.25s ease;
 
             .icon {
                 position: absolute;
@@ -333,6 +368,7 @@ a {
                 transform: translate(-50%, -50%);
                 display: grid;
                 place-items: center;
+                transition: all 0.25s ease;
 
                 img {
                     width: 75px;
@@ -437,6 +473,12 @@ footer {
 }
 
 @media only screen and (max-width: 955px) {
+    .loadanimation {
+        #loadlogo {
+            height: 5rem;
+        }
+    }
+
     .nav {
         width: 100%;
         padding: 20px 20px;
