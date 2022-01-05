@@ -6,27 +6,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <title>Dash Solutions</title>
 </head>
 <body>
+    <div class="loadanimation group" id="loadbg">
+        <img src="style/assets/images/logo-big.svg" class="group" alt="" id="loadlogo">
+    </div>
     <div id="backToTop" onclick="window.location.href = '#home';">
         <img src="style/assets/icons/arrow-up.svg" alt="">
     </div>
     <div class="hero" id="home">
         <div class="nav" id="navbar">
-            <img src="style/assets/icons/logo.svg" alt="">
-            <nav>
-                <ul>
-                    <li><a href="#home" id="homelink" class="navlink active">Home</a></li>
-                    <li><a href="#services" id="serviceslink" class="navlink">Services</a></li>
-                    <li><a href="#contact" id="contactlink" class="navlink">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="center">
+                <img src="style/assets/images/logo.svg" alt="" id="navlogo">
+            <!--<p>DASH<span>SOLUTIONS</span></p>-->
+                <nav>
+                    <ul>
+                        <li><a href="#home" id="homelink" class="navlink active">Home</a></li>
+                        <li><a href="#services" id="serviceslink" class="navlink">Services</a></li>
+                        <li><a href="#contact" id="contactlink" class="navlink">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <div class="wrapper">
-            <h1>FRONTEND WEB DESIGN,<br/>BY DASH SOLUTIONS</h1>
-            <div class="btns">
+            <h1 class="herostagger">FRONTEND WEB DESIGN,<br/>BY DASH SOLUTIONS</h1>
+            <div class="btns herostagger">
                 <a href="#services" class="btn cta">Learn more</a>
                 <a href="mailto:hello@dashxd.dev" class="btn secondary cta">Contact us now</a>
             </div>
@@ -34,49 +42,49 @@
     </div>
     <div class="services" id="services">
         <div class="wrapper">
-            <div class="heading">
-                <h1>What we can help you with</h1>
-                <h2>Services we provide</h2>
+            <div class="heading" id="servicesheading">
+                <h1 class="servicesheading">What we can help you with</h1>
+                <h2 class="servicesheading">Services we provide</h2>
             </div>
-            <div class="cards">
-                <div class="card">
+            <div class="cards" id="cards">
+                <div class="card cardstagger">
                     <div class="icon">
                         <img src="style/assets/icons/websites.svg" alt="">
                     </div>
-                    <p class="heading">WEBSITE DESIGN</p>
-                    <p class="desc">We specialize in creating beautiful, modern, fluent and responsive websites and web solutions. We focus both on the design, but also the functionality, to fit your every needs.</p>
-                    <a href="mailto:hello@dashxd.dev" class="btn btn-card">Contact now</a>
+                    <p class="heading cardstagger">WEBSITE DESIGN</p>
+                    <p class="desc cardstagger">We specialize in creating beautiful, modern, fluent and responsive websites and web solutions. We focus both on the design, but also the functionality, to fit your every needs.</p>
+                    <a href="mailto:hello@dashxd.dev" class="btn btn-card cardstagger">View portfolio</a>
                 </div>
 
-                <div class="card">
+                <div class="card cardstagger">
                     <div class="icon">
                         <img src="style/assets/icons/apps.svg" alt="">
                     </div>
-                    <p class="heading">APP DESIGN</p>
-                    <p class="desc">We create beautiful and fluid cross-platform apps using libraries like Electron and React for your project.</p>
-                    <a href="mailto:hello@dashxd.dev" class="btn btn-card">Contact now</a>
+                    <p class="heading cardstagger">APP DESIGN</p>
+                    <p class="desc cardstagger">We create beautiful and fluid cross-platform apps using libraries like Electron and React for your project.</p>
+                    <a href="mailto:hello@dashxd.dev" class="btn btn-card cardstagger">View portfolio</a>
                 </div>
 
-                <div class="card">
+                <div class="card cardstagger">
                     <div class="icon">
                         <img class="smaller" src="style/assets/icons/design.svg" alt="">
                     </div>
-                    <p class="heading">GRAPHIC DESIGN</p>
-                    <p class="desc">We create beautiful, modern and scalable logos and other graphic design, that fits whatever company you’re working on. </p>
-                    <a href="mailto:hello@dashxd.dev" class="btn btn-card">Contact now</a>
+                    <p class="heading cardstagger">GRAPHIC DESIGN</p>
+                    <p class="desc cardstagger">We create beautiful, modern and scalable logos and other graphic design, that fits whatever company you’re working on. </p>
+                    <a href="mailto:hello@dashxd.dev" class="btn btn-card cardstagger">View portfolio</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="contact" id="contact">
-        <div class="wrapper">
-            <p class="topheading">Contact</p>
-            <h1>Pricing and more information</h1>
-            <p class="text">Wan’t to know more about what we
+        <div class="wrapper" id="contactwrapper">
+            <p class="topheading contactstagger">Contact</p>
+            <h1 class="contactstagger">Pricing and more information</h1>
+            <p class="text contactstagger">Wan’t to know more about what we
                 do and who we are, and are you interested in
                 our products and pricing? Then contact us now!
             </p>
-            <a href="mailto:hello@dashxd.dev" class="btn">Get in contact</a>
+            <a href="mailto:hello@dashxd.dev" class="btn contactstagger">Get in contact</a>
         </div>
     </div>
     <footer>
